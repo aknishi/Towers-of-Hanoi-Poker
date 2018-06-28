@@ -23,9 +23,9 @@ class Card
     :ace   => "A"
   }
 
-  def initialize
-    @value 
-    @suit 
+  def initialize (suit, value)
+    @suit = suit
+    @value = value
   end
   
   def self.values
