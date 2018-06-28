@@ -1,4 +1,4 @@
-require 'card'
+require_relative 'card'
 
 class Deck
   #should create 52 unique cards
@@ -6,7 +6,7 @@ class Deck
   def self.create_deck
     suits = Card.suits
     values = Card.values
-    deck = suits.product(values).map do {|option| Card.new(option[0], option[1]) }
+    deck = suits.product(values).map {|option| Card.new(option[0], option[1]) }
     deck.shuffle
   end
   

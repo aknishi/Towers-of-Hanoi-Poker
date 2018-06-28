@@ -1,4 +1,7 @@
+require_relative 'deck'
+
 class Card
+  
   attr_reader :suit, :value
   SUITS= {
       :clubs    => "♣",
@@ -34,6 +37,10 @@ class Card
   
   def self.suits
     SUITS.keys
+  end
+  
+  def inspect
+    "<card> suit: #{suit}, value: #{value}"
   end
   
   
